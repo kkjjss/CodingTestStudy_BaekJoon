@@ -1,0 +1,19 @@
+{
+  "name": "codingteststudy_baekjoon",
+  "version": "1.0.0",
+  "description": "백준 코딩 테스트 공부 및 연습용 Node.js 프로젝트",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkjjss/CodingTestStudy_BaekJoon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkjjss/CodingTestStudy_BaekJoon/issues"
+  },
+  "homepage": "https://github.com/kkjjss/CodingTestStudy_BaekJoon#readme"
+}
