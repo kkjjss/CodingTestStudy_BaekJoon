@@ -23,3 +23,17 @@ function topDown(x) {
     return min;
 }
 
+function bottomUp(x) {
+    for (let i = 4; i <= x; i++) {
+        memo[i]=memo[i - 1]+1;
+        if (i % 3 === 0) {
+            memo[i]= Math.min(memo[i / 3]+1, memo[i]);
+        }
+        if (i % 2 === 0) {
+            memo[i]= Math.min(memo[i / 2]+1, memo[i]);
+        }
+    }
+    return memo[x];
+}
+
+console.log(bottomUp(num));
