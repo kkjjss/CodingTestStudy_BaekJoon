@@ -1,7 +1,7 @@
 const fs = require("fs");
 const input = fs.readFileSync("/dev/stdin").toString().split("\n").map((e)=>{
     return Number(e);
-});;
+});
 
 const memo = [0, 1, 2, 4];
 
