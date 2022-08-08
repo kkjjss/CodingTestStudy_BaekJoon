@@ -1,22 +1,12 @@
-// const fs = require("fs");
-// const input = fs.readFileSync("/dev/stdin").toString().split('\n');
-
-const input = `2
-5
-50 10 100 20 40
-30 50 70 10 60
-7
-10 30 10 50 100 20 40
-20 40 30 50 60 20 80`
-    .toString()
-    .split("\n");
+const fs = require("fs");
+const input = fs.readFileSync("/dev/stdin").toString().split('\n');
 
 const caseNum = input[0];
 
 const inputArr = [];
 
 for (let i = 0; i < caseNum; i++) {
-    inputArr[i] = { n: input[3 * i + 1], sticker: [input[3 * i + 2].split(" ").map((n) => BigInt(n)), input[3 * i + 3].split(" ").map((n) => BigInt(n))] };
+    inputArr[i] = { n: input[3 * i + 1], sticker: [input[3 * i + 2].split(" ").map((n) => Number(n)), input[3 * i + 3].split(" ").map((n) => Number(n))] };
 }
 
 for (let i = 0; i < caseNum; i++) {
