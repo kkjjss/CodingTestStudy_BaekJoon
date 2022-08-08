@@ -1,5 +1,5 @@
 # CodingTestStudy_BaekJoon
-백준 코딩 테스트 공부 및 연습용 Node.js 프로젝트
+백준 코딩 테스트 공부 및 연습용 레포지토리
 
 ## plzrun 커리큘럼
 ### 입출력
