@@ -4,6 +4,7 @@
     "ios": "cpp",
     "map": "cpp",
     "__locale": "cpp",
-    "functional": "cpp"
+    "functional": "cpp",
+    "iosfwd": "cpp"
   }
 }

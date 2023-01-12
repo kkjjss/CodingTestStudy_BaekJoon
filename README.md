@@ -68,6 +68,6 @@
 
 ### CPP
 ```
-g++ -std=c++14 -Wall cpp/2039.cpp -o test.out
+g++ -std=c++14 -Wall cpp/filename.cpp -o test.out
 ./test.out
 ```
