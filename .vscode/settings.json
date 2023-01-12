@@ -5,6 +5,10 @@
     "map": "cpp",
     "__locale": "cpp",
     "functional": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "ostream": "cpp",
+    "queue": "cpp",
+    "stack": "cpp",
+    "random": "cpp"
   }
 }
