@@ -9,6 +9,8 @@
     "ostream": "cpp",
     "queue": "cpp",
     "stack": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "string": "cpp",
+    "vector": "cpp"
   }
 }
