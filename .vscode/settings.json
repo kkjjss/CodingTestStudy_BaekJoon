@@ -11,6 +11,9 @@
     "stack": "cpp",
     "random": "cpp",
     "string": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "regex": "cpp",
+    "sstream": "cpp",
+    "stacktrace": "cpp"
   }
 }
