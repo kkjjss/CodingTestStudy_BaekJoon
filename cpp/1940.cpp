@@ -22,7 +22,7 @@ int main()
     {
       cin >> p[i];
     }
-
+    // 중첩 for문 3개까지는 무방!
     for (int i = 0; i < n; i++)
     {
       for (int j = i + 1; j < n; j++)
