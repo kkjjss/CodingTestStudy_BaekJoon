@@ -3,8 +3,6 @@ using namespace std;
 
 long long a, b, c;
 
-map<long long, long long> m;
-
 long long sqrt(long long x, long long y)
 {
   if (y == 1)
@@ -19,8 +17,6 @@ long long sqrt(long long x, long long y)
 int main()
 {
   cin >> a >> b >> c;
-
-  m[1] = a;
 
   sqrt(a, b);
 
