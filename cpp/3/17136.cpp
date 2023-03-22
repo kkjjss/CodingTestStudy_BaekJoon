@@ -40,7 +40,7 @@ void discover(int y, int x, int size)
   {
     for (int j = 0; j < size; j++)
     {
-      mp[y + i][x + j] = 0;
+      mp[y + i][x + j] = 1;
     }
   }
 }
@@ -68,7 +68,7 @@ void dfs(int y, int x, int cnt)
     return;
   }
 
-  for (int i = 5; i >= 1; i--)
+  for (int i = 1; i <= 5; i++)
   {
     if (p[i] == 0)
       continue;
