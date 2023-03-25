@@ -3,31 +3,28 @@ using namespace std;
 
 int n, l, r, mp[100][100], visited[100][100];
 
-vector<pair<int, int>> open[10000];
-int cnt = 0;
+vector<pair<int, int>> v;
+int sum;
+int res;
 
 int dy[] = {-1, 0, 1, 0};
 int dx[] = {0, 1, 0, -1};
 
-int dfs(int y, int x)
+void dfs(int y, int x)
 {
-  int sum = mp[y][x];
   visited[y][x] = 1;
+  v.push_back({y, x});
   for (int i = 0; i < 4; i++)
   {
     int ny = y + dy[i];
     int nx = x + dx[i];
-
     if (ny < 0 || ny >= n || nx < 0 || nx >= n || visited[ny][nx])
       continue;
     if (abs(mp[y][x] - mp[ny][nx]) < l || abs(mp[y][x] - mp[ny][nx]) > r)
       continue;
-
-    open[cnt].push_back({ny, nx});
-    sum += dfs(ny, nx);
+    dfs(ny, nx);
+    sum += mp[ny][nx];
   }
-
-  return sum;
 }
 
 int main()
@@ -41,31 +38,36 @@ int main()
     }
   }
 
-  for (int i = 0; i < n; i++)
+  while (true)
   {
-    for (int j = 0; j < n; j++)
+    bool flag = false;
+    fill(&visited[0][0], &visited[0][0] + 100 * 100, 0);
+    for (int i = 0; i < n; i++)
     {
-      if (visited[i][j] != 0)
-        continue;
-      open[cnt].push_back({i, j});
-      dfs(i, j);
-      cnt++;
+      for (int j = 0; j < n; j++)
+      {
+        if (!visited[i][j])
+        {
+          v.clear();
+          sum = mp[i][j];
+          dfs(i, j);
+          if (v.size() <= 1)
+            continue;
+          for (auto a : v)
+          {
+            flag = true;
+            mp[a.first][a.second] = sum / v.size();
+          }
+        }
+      }
     }
+    if (!flag)
+      break;
+    else
+      res++;
   }
 
-  for (int i = 0; i <= cnt; i++)
-  {
-    if (open[i].size() <= 1)
-      continue;
-    int s = 0;
-    int sum = 0;
-    for (pair<int, int> a : open[i])
-    {
-      s++;
-      sum += mp[a.first][a.second];
-    }
-    printf("size: %d, sum: %d\n", s, sum);
-  }
+  cout << res << '\n';
 
   return 0;
 }
